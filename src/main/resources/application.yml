@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    host: 192.168.74.131
+    port: 6379
+    password: 224336
