@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface VideoCardService {
 
-    List<VideoCardDO> list();
+    List<VideoCardDO> list(boolean isCache);
 }

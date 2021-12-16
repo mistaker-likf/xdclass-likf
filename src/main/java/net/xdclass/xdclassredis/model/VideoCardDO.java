@@ -1,8 +1,9 @@
 package net.xdclass.xdclassredis.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class VideoCardDO {
+public class VideoCardDO{
 
     private String title;
 

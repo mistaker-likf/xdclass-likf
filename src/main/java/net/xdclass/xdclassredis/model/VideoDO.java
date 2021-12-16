@@ -1,6 +1,8 @@
 package net.xdclass.xdclassredis.model;
 
-public class VideoDO {
+import java.io.Serializable;
+
+public class VideoDO{
 
     private int id;
 
@@ -9,6 +11,38 @@ public class VideoDO {
     private String img;
 
     private int weight;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 
     public VideoDO() {
     }

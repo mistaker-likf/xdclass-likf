@@ -2,7 +2,7 @@ package net.xdclass.xdclassredis.model;
 
 import java.io.Serializable;
 
-public class UserDO implements Serializable {
+public class UserDO{
 
     private Integer id;
 

@@ -1,7 +1,6 @@
 package net.xdclass.xdclassredis.dao;
 
 
-import ch.qos.logback.core.util.TimeUtil;
 import net.xdclass.xdclassredis.model.VideoCardDO;
 import net.xdclass.xdclassredis.model.VideoDO;
 import org.springframework.stereotype.Repository;
@@ -42,11 +41,11 @@ public class VideoCardDao {
 
         VideoCardDO videoCardDO2 = new VideoCardDO();
         videoCardDO2.setId(2);
-        videoCardDO2.setTitle("热门视频");
+        videoCardDO2.setTitle("项目实战视频");
 
         VideoDO videoDO5 = new VideoDO(5, "springcloud微服务视频项目", "xdclass.net", 43);
         VideoDO videoDO6 = new VideoDO(6, "操作系统实战项目", "xdclass.net", 32);
-        VideoDO videoDO7 = new VideoDO(7, "JVM专题视频项目", "xdclass.net", 43);
+        VideoDO videoDO7 = new VideoDO(7, "JVM专题视频&&实战项目", "xdclass.net", 43);
         VideoDO videoDO8 = new VideoDO(8, "设计模式", "xdclass.net", 4);
 
         List<VideoDO> videoDOS2= new ArrayList<>();
@@ -60,6 +59,5 @@ public class VideoCardDao {
         cardDOList.add(videoCardDO2);
 
         return cardDOList;
-
     }
 }
