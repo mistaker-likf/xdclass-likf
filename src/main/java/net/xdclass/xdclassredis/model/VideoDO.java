@@ -1,7 +1,5 @@
 package net.xdclass.xdclassredis.model;
 
-import java.io.Serializable;
-
 public class VideoDO{
 
     private int id;
@@ -10,7 +8,7 @@ public class VideoDO{
 
     private String img;
 
-    private int weight;
+    private int price;
 
     public int getId() {
         return id;
@@ -36,22 +34,22 @@ public class VideoDO{
         this.img = img;
     }
 
-    public int getWeight() {
-        return weight;
+    public int getPrice() {
+        return price;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public VideoDO() {
     }
 
-    public VideoDO(int id, String title, String img, int weight) {
+    public VideoDO(int id, String title, String img, int price) {
         this.id = id;
         this.title = title;
         this.img = img;
-        this.weight = weight;
+        this.price = price;
     }
 
     @Override
@@ -60,7 +58,7 @@ public class VideoDO{
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", img='" + img + '\'' +
-                ", weight=" + weight +
+                ", weight=" + price +
                 '}';
     }
 }

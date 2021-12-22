@@ -22,7 +22,7 @@ public class CaptchaConfig {
 
     /**
      * 验证码配置
-     * Kaptcha配置类名
+     * Captcha配置类名
      *
      * @return
      */
