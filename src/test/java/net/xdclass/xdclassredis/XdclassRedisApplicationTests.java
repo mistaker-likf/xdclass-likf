@@ -2,8 +2,10 @@ package net.xdclass.xdclassredis;
 
 import net.xdclass.xdclassredis.model.UserDO;
 import net.xdclass.xdclassredis.model.VideoDO;
+import net.xdclass.xdclassredis.vo.UserPointVO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.*;
 
@@ -110,4 +112,29 @@ class XdclassRedisApplicationTests {
 		System.out.println("两人的所有好友：" + unionSet);
 
 	}
+
+	@Test
+	void testData() {
+
+		UserPointVO p1 = new UserPointVO("A", "324");
+		UserPointVO p2 = new UserPointVO("B", "242");
+		UserPointVO p3 = new UserPointVO("C", "542345");
+		UserPointVO p4 = new UserPointVO("D", "235");
+		UserPointVO p5 = new UserPointVO("E", "1245");
+		UserPointVO p6 = new UserPointVO("F", "234543");
+		UserPointVO p7 = new UserPointVO("G", "3236");
+
+		BoundZSetOperations<String, UserPointVO> operations = redisTemplate.boundZSetOps("point:rank:real");
+
+		operations.removeRange(0, -1);
+		operations.add(p1, 324);
+		operations.add(p2, 542);
+		operations.add(p3, 52);
+		operations.add(p4, 434);
+		operations.add(p5, 23);
+		operations.add(p6, 64);
+		operations.add(p7, 765);
+
+	}
 }
+

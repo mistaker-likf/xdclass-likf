@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  cache:
+    type: redis
+    
   redis:
     host: 192.168.74.131
     port: 6379
