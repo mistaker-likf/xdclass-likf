@@ -4,7 +4,6 @@ import net.xdclass.xdclassredis.model.VideoDO;
 import net.xdclass.xdclassredis.util.JsonData;
 import net.xdclass.xdclassredis.vo.UserPointVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.redis.core.BoundZSetOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -121,7 +120,5 @@ public class RankController {
         return JsonData.buildSuccess(point);
 
     }
-
-
 
 }

@@ -5,12 +5,13 @@ spring:
   #指定spring cache缓存的类型
   cache:
     type: redis
+    redis:
+      cache-null-values: true #缓存空值 预防缓存穿透
 
   redis:
     host: 192.168.74.131
     port: 6379
     password: 224336
-
 
     #指定redis底层客户端实现
     client-type: jedis
@@ -54,3 +55,4 @@ spring:
   mybatis-plus:
     configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
