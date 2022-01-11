@@ -44,6 +44,5 @@ public class VideoCardServiceImpl implements VideoCardService {
         }else{
             return videoCardDao.list();
         }
-
     }
 }
