@@ -11,9 +11,14 @@ spring:
   redis:
     #host: 192.168.74.131
     #port: 6379
-    sentinel:
-      master: mymaster
-      nodes: 192.168.74.132:26379, 192.168.74.132:26380, 192.168.74.132:26381
+#    sentinel:
+#      master: mymaster
+#      nodes: 192.168.74.132:26379, 192.168.74.132:26380, 192.168.74.132:26381
+    cluster:
+      #命名的最多转发次数
+      max-redirects: 3
+      nodes: 192.168.74.132:6381, 192.168.74.132:6382, 192.168.74.132:6383,
+            192.168.74.132:6384, 192.168.74.132:6385, 192.168.74.132:6386
     password: 224336
 
     #指定redis底层客户端实现
@@ -54,7 +59,7 @@ spring:
     password: 224336
 
 #配置plus打印sql日志
-  mybatis-plus:
-    configuration:
-      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
